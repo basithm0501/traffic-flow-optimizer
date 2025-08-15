@@ -1,4 +1,4 @@
-# Smart City Traffic Flow Optimization
+# Smart City Traffic Flow Optimization [WIP]
 
 ## Overview
 This project leverages computer vision and geospatial analytics to optimize urban traffic flow using live camera feeds, weather data, and event schedules. The goal is to predict congestion and optimize traffic signal timings for smarter, safer cities.
