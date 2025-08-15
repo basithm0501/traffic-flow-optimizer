@@ -1,0 +1,27 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.547803, 43.111108]
+      },
+      "properties": {
+        "name": "Monroe Ave & Clover St (NY65)",
+        "camera_feed": "https://511ny.org/"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-77.5653911674301, 43.12708222627869]
+      },
+      "properties": {
+        "name": "Monroe Ave & S Winton Rd",
+        "camera_feed": "https://511ny.org/"
+      }
+    }
+  ]
+}
