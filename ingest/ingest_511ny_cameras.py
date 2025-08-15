@@ -7,7 +7,7 @@ import time
 from PIL import Image
 from io import BytesIO
 from dotenv import load_dotenv
-import json
+import jsont
 from math import radians, cos, sin, sqrt, atan2
 from kafka import KafkaProducer
 
