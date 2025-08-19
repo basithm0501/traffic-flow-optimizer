@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<net>
+    <!-- Simple 4-intersection corridor network scaffold -->
+    <!-- Add nodes -->
+    <nodes>
+        <node id="n1" x="0" y="0" type="traffic_light"/>
+        <node id="n2" x="100" y="0" type="traffic_light"/>
+        <node id="n3" x="200" y="0" type="traffic_light"/>
+        <node id="n4" x="300" y="0" type="traffic_light"/>
+    </nodes>
+    <!-- Add edges -->
+    <edges>
+        <edge id="e1" from="n1" to="n2" numLanes="2" speed="13.9"/>
+        <edge id="e2" from="n2" to="n3" numLanes="2" speed="13.9"/>
+        <edge id="e3" from="n3" to="n4" numLanes="2" speed="13.9"/>
+        <edge id="e4" from="n4" to="n3" numLanes="2" speed="13.9"/>
+        <edge id="e5" from="n3" to="n2" numLanes="2" speed="13.9"/>
+        <edge id="e6" from="n2" to="n1" numLanes="2" speed="13.9"/>
+    </edges>
+</net>

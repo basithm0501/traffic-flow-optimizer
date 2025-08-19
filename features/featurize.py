@@ -57,15 +57,25 @@ for loc in INTERSECTIONS:
 weather_df = pd.concat(weather_dfs, ignore_index=True)
 
 # Load traffic metrics (assume metrics.parquet exists)
-metrics_path = "data/metrics.parquet"
+metrics_path = "notebooks/geo/data/metrics.parquet"
 if os.path.exists(metrics_path):
     metrics_df = pd.read_parquet(metrics_path)
-    # Merge on intersection name and hour
     metrics_df["hour"] = pd.to_datetime(metrics_df["minute"]).dt.floor("H")
     weather_df["hour"] = pd.to_datetime(weather_df["time"])
-    features_df = pd.merge(metrics_df, weather_df, left_on=["camera_id", "hour"], right_on=["intersection", "hour"], how="left")
-    # Save enriched features
-    features_df.to_parquet("data/features.parquet")
-    print("Saved enriched features to data/features.parquet")
+    # Try joining on camera_id, else fallback to lane_id
+    join_col = None
+    if "camera_id" in metrics_df.columns:
+        join_col = "camera_id"
+    elif "lane_id" in metrics_df.columns:
+        join_col = "lane_id"
+    else:
+        print("No camera_id or lane_id column found in metrics_df. Cannot join.")
+        join_col = None
+    if join_col:
+        features_df = pd.merge(metrics_df, weather_df, left_on=[join_col, "hour"], right_on=["intersection", "hour"], how="left")
+        features_df.to_parquet("data/features.parquet")
+        print(f"Saved enriched features to data/features.parquet using {join_col}.")
+    else:
+        print("Join failed: No valid join column.")
 else:
     print(f"Metrics file not found: {metrics_path}")
