@@ -76,19 +76,19 @@ async def fetch_and_publish(cam, producer, interval=2):
                     ("codec", b"jpg"),
                 ]
                 await producer.send_and_wait("cams.raw.frames", value=jpeg_bytes, key=key, headers=headers)
-                print(f"Published frame from {cam['Name']}")
+                print(f"[INGEST] Published frame from {cam['Name']} (ID: {cam['ID']}) to cams.raw.frames at {ts_ms.decode()}")
             else:
-                print(f"Failed {cam['ID']} status {resp.status_code}")
+                print(f"[INGEST] Failed to fetch frame for {cam['Name']} (ID: {cam['ID']}) - status {resp.status_code}")
         except Exception as e:
-            print(f"Error fetching {cam['ID']}: {e}")
+            print(f"[INGEST] Error fetching {cam['Name']} (ID: {cam['ID']}): {e}")
         await asyncio.sleep(interval)
 
 async def main():
     locations = load_locations()
     cameras = fetch_cameras(API_KEY)
-    print(f"Found {len(cameras)} cameras from API.")
+    print(f"[INGEST] Found {len(cameras)} cameras from API.")
     matched = match_cameras(cameras, locations)
-    print(f"Matched {len(matched)} cameras to intersections.")
+    print(f"[INGEST] Matched {len(matched)} cameras to intersections: {[cam['Name'] for cam in matched]}")
 
     producer = AIOKafkaProducer(bootstrap_servers="localhost:9092")
     await producer.start()

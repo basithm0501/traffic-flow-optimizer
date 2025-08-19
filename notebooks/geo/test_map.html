@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_3161b458bd6c334b8310ae588af62074 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_3161b458bd6c334b8310ae588af62074" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_3161b458bd6c334b8310ae588af62074 = L.map(
+                "map_3161b458bd6c334b8310ae588af62074",
+                {
+                    center: [43.119095113139345, -77.55659708371505],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 15,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_178adba0de821d6cef1722b51567c1bd = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_178adba0de821d6cef1722b51567c1bd.addTo(map_3161b458bd6c334b8310ae588af62074);
+        
+    
+            var marker_5e071bb1b1d9b4ba3eb3edd89e30b5db = L.marker(
+                [43.12708222627869, -77.5653911674301],
+                {
+}
+            ).addTo(map_3161b458bd6c334b8310ae588af62074);
+        
+    
+        var popup_ca59cf9a0a11004a1d7f0624d7a6e7e4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ce0027c0510fd9ca816327ef0e42f703 = $(`<div id="html_ce0027c0510fd9ca816327ef0e42f703" style="width: 100.0%; height: 100.0%;">Monroe Ave & S Winton Rd</div>`)[0];
+                popup_ca59cf9a0a11004a1d7f0624d7a6e7e4.setContent(html_ce0027c0510fd9ca816327ef0e42f703);
+            
+        
+
+        marker_5e071bb1b1d9b4ba3eb3edd89e30b5db.bindPopup(popup_ca59cf9a0a11004a1d7f0624d7a6e7e4)
+        ;
+
+        
+    
+    
+            var marker_4ba7c5161fbef104c639c82cdc14127b = L.marker(
+                [43.111108, -77.547803],
+                {
+}
+            ).addTo(map_3161b458bd6c334b8310ae588af62074);
+        
+    
+        var popup_19e7145c38a578f342f65033f516f568 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_44a1829232107d0f347fdf11de9ee962 = $(`<div id="html_44a1829232107d0f347fdf11de9ee962" style="width: 100.0%; height: 100.0%;">Monroe Ave & Clover St (NY65)</div>`)[0];
+                popup_19e7145c38a578f342f65033f516f568.setContent(html_44a1829232107d0f347fdf11de9ee962);
+            
+        
+
+        marker_4ba7c5161fbef104c639c82cdc14127b.bindPopup(popup_19e7145c38a578f342f65033f516f568)
+        ;
+
+        
+    
+    
+        function geo_json_63e2498434ecca7627a6c52191537415_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#00ff20", "fillColor": "#00ff20", "fillOpacity": 0.6, "weight": 2};
+            }
+        }
+
+        function geo_json_63e2498434ecca7627a6c52191537415_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_63e2498434ecca7627a6c52191537415 = L.geoJson(null, {
+                onEachFeature: geo_json_63e2498434ecca7627a6c52191537415_onEachFeature,
+            
+                style: geo_json_63e2498434ecca7627a6c52191537415_styler,
+            ...{
+}
+        });
+
+        function geo_json_63e2498434ecca7627a6c52191537415_add (data) {
+            geo_json_63e2498434ecca7627a6c52191537415
+                .addData(data);
+        }
+            geo_json_63e2498434ecca7627a6c52191537415_add({"features": [{"geometry": {"coordinates": [[[0.0, 110.0], [140.0, 110.0], [140.0, 140.0], [0.0, 140.0], [0.0, 110.0]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_63e2498434ecca7627a6c52191537415.bindTooltip(
+                `<div>
+                     Camera: Skyline-5557<br>queue_length: 1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_63e2498434ecca7627a6c52191537415.addTo(map_3161b458bd6c334b8310ae588af62074);
+        
+    
+        function geo_json_e6196c14f2ece456d8e3f323e21cc675_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#00ff20", "fillColor": "#00ff20", "fillOpacity": 0.6, "weight": 2};
+            }
+        }
+
+        function geo_json_e6196c14f2ece456d8e3f323e21cc675_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_e6196c14f2ece456d8e3f323e21cc675 = L.geoJson(null, {
+                onEachFeature: geo_json_e6196c14f2ece456d8e3f323e21cc675_onEachFeature,
+            
+                style: geo_json_e6196c14f2ece456d8e3f323e21cc675_styler,
+            ...{
+}
+        });
+
+        function geo_json_e6196c14f2ece456d8e3f323e21cc675_add (data) {
+            geo_json_e6196c14f2ece456d8e3f323e21cc675
+                .addData(data);
+        }
+            geo_json_e6196c14f2ece456d8e3f323e21cc675_add({"features": [{"geometry": {"coordinates": [[[0.0, 140.0], [150.0, 140.0], [150.0, 165.0], [0.0, 165.0], [0.0, 140.0]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_e6196c14f2ece456d8e3f323e21cc675.bindTooltip(
+                `<div>
+                     Camera: Skyline-5557<br>queue_length: 1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_e6196c14f2ece456d8e3f323e21cc675.addTo(map_3161b458bd6c334b8310ae588af62074);
+        
+    
+        function geo_json_4f23cce6d5658801731bc9857a00bd3a_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#00ff20", "fillColor": "#00ff20", "fillOpacity": 0.6, "weight": 2};
+            }
+        }
+
+        function geo_json_4f23cce6d5658801731bc9857a00bd3a_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_4f23cce6d5658801731bc9857a00bd3a = L.geoJson(null, {
+                onEachFeature: geo_json_4f23cce6d5658801731bc9857a00bd3a_onEachFeature,
+            
+                style: geo_json_4f23cce6d5658801731bc9857a00bd3a_styler,
+            ...{
+}
+        });
+
+        function geo_json_4f23cce6d5658801731bc9857a00bd3a_add (data) {
+            geo_json_4f23cce6d5658801731bc9857a00bd3a
+                .addData(data);
+        }
+            geo_json_4f23cce6d5658801731bc9857a00bd3a_add({"features": [{"geometry": {"coordinates": [[[210.0, 105.0], [351.0, 105.0], [351.0, 140.0], [210.0, 140.0], [210.0, 105.0]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_4f23cce6d5658801731bc9857a00bd3a.bindTooltip(
+                `<div>
+                     Camera: Skyline-5557<br>queue_length: 1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_4f23cce6d5658801731bc9857a00bd3a.addTo(map_3161b458bd6c334b8310ae588af62074);
+        
+    
+        function geo_json_11101782b3a4845a92a2533a9012b9ed_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#ff0020", "fillColor": "#ff0020", "fillOpacity": 0.6, "weight": 2};
+            }
+        }
+
+        function geo_json_11101782b3a4845a92a2533a9012b9ed_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_11101782b3a4845a92a2533a9012b9ed = L.geoJson(null, {
+                onEachFeature: geo_json_11101782b3a4845a92a2533a9012b9ed_onEachFeature,
+            
+                style: geo_json_11101782b3a4845a92a2533a9012b9ed_styler,
+            ...{
+}
+        });
+
+        function geo_json_11101782b3a4845a92a2533a9012b9ed_add (data) {
+            geo_json_11101782b3a4845a92a2533a9012b9ed
+                .addData(data);
+        }
+            geo_json_11101782b3a4845a92a2533a9012b9ed_add({"features": [{"geometry": {"coordinates": [[[200.0, 140.0], [351.0, 140.0], [351.0, 170.0], [200.0, 170.0], [200.0, 140.0]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_11101782b3a4845a92a2533a9012b9ed.bindTooltip(
+                `<div>
+                     Camera: Skyline-5557<br>queue_length: 2
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_11101782b3a4845a92a2533a9012b9ed.addTo(map_3161b458bd6c334b8310ae588af62074);
+        
+    
+        function geo_json_e2eedf9b1294f72bb18a3863774cda0e_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#00ff20", "fillColor": "#00ff20", "fillOpacity": 0.6, "weight": 2};
+            }
+        }
+
+        function geo_json_e2eedf9b1294f72bb18a3863774cda0e_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_e2eedf9b1294f72bb18a3863774cda0e = L.geoJson(null, {
+                onEachFeature: geo_json_e2eedf9b1294f72bb18a3863774cda0e_onEachFeature,
+            
+                style: geo_json_e2eedf9b1294f72bb18a3863774cda0e_styler,
+            ...{
+}
+        });
+
+        function geo_json_e2eedf9b1294f72bb18a3863774cda0e_add (data) {
+            geo_json_e2eedf9b1294f72bb18a3863774cda0e
+                .addData(data);
+        }
+            geo_json_e2eedf9b1294f72bb18a3863774cda0e_add({"features": [{"geometry": {"coordinates": [[[150.0, 40.0], [225.0, 60.0], [205.0, 120.0], [140.0, 110.0], [150.0, 40.0]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_e2eedf9b1294f72bb18a3863774cda0e.bindTooltip(
+                `<div>
+                     Camera: Skyline-5557<br>queue_length: 1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_e2eedf9b1294f72bb18a3863774cda0e.addTo(map_3161b458bd6c334b8310ae588af62074);
+        
+    
+        function geo_json_61d5628a96d06e6409880a5bc86652f4_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#00ff20", "fillColor": "#00ff20", "fillOpacity": 0.6, "weight": 2};
+            }
+        }
+
+        function geo_json_61d5628a96d06e6409880a5bc86652f4_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_61d5628a96d06e6409880a5bc86652f4 = L.geoJson(null, {
+                onEachFeature: geo_json_61d5628a96d06e6409880a5bc86652f4_onEachFeature,
+            
+                style: geo_json_61d5628a96d06e6409880a5bc86652f4_styler,
+            ...{
+}
+        });
+
+        function geo_json_61d5628a96d06e6409880a5bc86652f4_add (data) {
+            geo_json_61d5628a96d06e6409880a5bc86652f4
+                .addData(data);
+        }
+            geo_json_61d5628a96d06e6409880a5bc86652f4_add({"features": [{"geometry": {"coordinates": [[[270.0, 185.0], [351.0, 175.0], [351.0, 239.0], [230.0, 239.0], [270.0, 185.0]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_61d5628a96d06e6409880a5bc86652f4.bindTooltip(
+                `<div>
+                     Camera: Skyline-5557<br>queue_length: 1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_61d5628a96d06e6409880a5bc86652f4.addTo(map_3161b458bd6c334b8310ae588af62074);
+        
+    
+        function geo_json_5a5480c9a277c7500ccc13f47459ea57_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#00ff20", "fillColor": "#00ff20", "fillOpacity": 0.6, "weight": 2};
+            }
+        }
+
+        function geo_json_5a5480c9a277c7500ccc13f47459ea57_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_5a5480c9a277c7500ccc13f47459ea57 = L.geoJson(null, {
+                onEachFeature: geo_json_5a5480c9a277c7500ccc13f47459ea57_onEachFeature,
+            
+                style: geo_json_5a5480c9a277c7500ccc13f47459ea57_styler,
+            ...{
+}
+        });
+
+        function geo_json_5a5480c9a277c7500ccc13f47459ea57_add (data) {
+            geo_json_5a5480c9a277c7500ccc13f47459ea57
+                .addData(data);
+        }
+            geo_json_5a5480c9a277c7500ccc13f47459ea57_add({"features": [{"geometry": {"coordinates": [[[185.0, 95.0], [230.0, 95.0], [230.0, 200.0], [185.0, 200.0], [185.0, 95.0]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_5a5480c9a277c7500ccc13f47459ea57.bindTooltip(
+                `<div>
+                     Camera: Skyline-13982<br>queue_length: 1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_5a5480c9a277c7500ccc13f47459ea57.addTo(map_3161b458bd6c334b8310ae588af62074);
+        
+    
+        function geo_json_15f50d8638ce973e9ae4bab5d97b3779_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#00ff20", "fillColor": "#00ff20", "fillOpacity": 0.6, "weight": 2};
+            }
+        }
+
+        function geo_json_15f50d8638ce973e9ae4bab5d97b3779_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_15f50d8638ce973e9ae4bab5d97b3779 = L.geoJson(null, {
+                onEachFeature: geo_json_15f50d8638ce973e9ae4bab5d97b3779_onEachFeature,
+            
+                style: geo_json_15f50d8638ce973e9ae4bab5d97b3779_styler,
+            ...{
+}
+        });
+
+        function geo_json_15f50d8638ce973e9ae4bab5d97b3779_add (data) {
+            geo_json_15f50d8638ce973e9ae4bab5d97b3779
+                .addData(data);
+        }
+            geo_json_15f50d8638ce973e9ae4bab5d97b3779_add({"features": [{"geometry": {"coordinates": [[[230.0, 90.0], [275.0, 90.0], [275.0, 200.0], [230.0, 200.0], [230.0, 90.0]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_15f50d8638ce973e9ae4bab5d97b3779.bindTooltip(
+                `<div>
+                     Camera: Skyline-13982<br>queue_length: 1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_15f50d8638ce973e9ae4bab5d97b3779.addTo(map_3161b458bd6c334b8310ae588af62074);
+        
+    
+        function geo_json_1a50efcae08071dd978717c4f5e165f9_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"color": "#00ff20", "fillColor": "#00ff20", "fillOpacity": 0.6, "weight": 2};
+            }
+        }
+
+        function geo_json_1a50efcae08071dd978717c4f5e165f9_onEachFeature(feature, layer) {
+
+            layer.on({
+            });
+        };
+        var geo_json_1a50efcae08071dd978717c4f5e165f9 = L.geoJson(null, {
+                onEachFeature: geo_json_1a50efcae08071dd978717c4f5e165f9_onEachFeature,
+            
+                style: geo_json_1a50efcae08071dd978717c4f5e165f9_styler,
+            ...{
+}
+        });
+
+        function geo_json_1a50efcae08071dd978717c4f5e165f9_add (data) {
+            geo_json_1a50efcae08071dd978717c4f5e165f9
+                .addData(data);
+        }
+            geo_json_1a50efcae08071dd978717c4f5e165f9_add({"features": [{"geometry": {"coordinates": [[[275.0, 85.0], [330.0, 85.0], [330.0, 200.0], [275.0, 200.0], [275.0, 85.0]]], "type": "Polygon"}, "id": "0", "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+            geo_json_1a50efcae08071dd978717c4f5e165f9.bindTooltip(
+                `<div>
+                     Camera: Skyline-13982<br>queue_length: 1
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            geo_json_1a50efcae08071dd978717c4f5e165f9.addTo(map_3161b458bd6c334b8310ae588af62074);
+        
+    
+            tile_layer_178adba0de821d6cef1722b51567c1bd.addTo(map_3161b458bd6c334b8310ae588af62074);
+        
+    
+            geo_json_63e2498434ecca7627a6c52191537415.addTo(map_3161b458bd6c334b8310ae588af62074);
+        
+    
+            geo_json_e6196c14f2ece456d8e3f323e21cc675.addTo(map_3161b458bd6c334b8310ae588af62074);
+        
+    
+            geo_json_4f23cce6d5658801731bc9857a00bd3a.addTo(map_3161b458bd6c334b8310ae588af62074);
+        
+    
+            geo_json_11101782b3a4845a92a2533a9012b9ed.addTo(map_3161b458bd6c334b8310ae588af62074);
+        
+    
+            geo_json_e2eedf9b1294f72bb18a3863774cda0e.addTo(map_3161b458bd6c334b8310ae588af62074);
+        
+    
+            geo_json_61d5628a96d06e6409880a5bc86652f4.addTo(map_3161b458bd6c334b8310ae588af62074);
+        
+    
+            geo_json_5a5480c9a277c7500ccc13f47459ea57.addTo(map_3161b458bd6c334b8310ae588af62074);
+        
+    
+            geo_json_15f50d8638ce973e9ae4bab5d97b3779.addTo(map_3161b458bd6c334b8310ae588af62074);
+        
+    
+            geo_json_1a50efcae08071dd978717c4f5e165f9.addTo(map_3161b458bd6c334b8310ae588af62074);
+        
+</script>
+</html>
