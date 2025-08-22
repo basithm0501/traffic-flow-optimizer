@@ -5,7 +5,7 @@ import numpy as np
 import json
 
 app = FastAPI()
-model = YOLO('yolov8n.pt')  # Use a different model if needed
+model = YOLO('yolov8n.pt') 
 
 @app.post("/infer")
 async def infer_image(file: UploadFile = File(...)):
